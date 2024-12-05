@@ -1,0 +1,218 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #444;
+  }
+  
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+  }
+  
+  #addUserBtn {
+    display: block;
+    margin: 20px auto;
+    background-color: #FF69B4;
+    color: white;
+    font-weight: bold;
+  }
+  
+  #addUserBtn span {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  
+  #addUserBtn:hover {
+    background-color: #800844;
+  }
+  table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  thead {
+    background-color: #FF69B4;
+    color: white;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    font-weight: bold;
+  }
+  
+  tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  button[style*="background-color: #dc3545;"] {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  button[style*="background-color: #dc3545;"]:hover {
+    background-color: #c82333;
+  }
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-container h2 {
+    margin-bottom: 20px;
+    color: hsl(217, 71%, 53%);
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .modal-container label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .modal-container input, 
+  .modal-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+  }
+  
+  .modal-container input[type="file"] {
+    padding: 8px;
+  }
+  
+  .modal-container input:focus, 
+  .modal-container select:focus {
+    border-color: hsl(217, 71%, 53%);
+    outline: none;
+  }
+  
+  .modal-container button {
+    background-color: hsl(217, 71%, 53%);
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .modal-container button:hover {
+    background-color: hsl(217, 61%, 48%);
+    transform: scale(1.05);
+  }
+  
+  #closeModalBtn {
+    background-color: #6c757d;
+    font-weight: normal;
+  }
+  
+  #closeModalBtn:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .modal-container {
+      width: 90%;
+      max-width: 350px;
+    }
+  
+    .modal-container h2 {
+      font-size: 1.6em;
+    }
+  
+    .modal-container label {
+      font-size: 13px;
+    }
+  
+    .modal-container input,
+    .modal-container select {
+      font-size: 12px;
+    }
+  
+    .modal-container button {
+      padding: 10px 15px;
+    }
+  }    
+   /* for search btn */
+  div {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  #searchInput {
+    padding: 10px;
+    border: 2px solid #ff007f;
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 10px;
+  }
+  #searchBtn {
+    padding: 10px 20px;
+    background-color: #ff007f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #searchBtn:hover {
+    background-color: #9b0854;
+  }
