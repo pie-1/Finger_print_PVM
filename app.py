@@ -31,7 +31,7 @@ def home():
 @app.route("/tempgetFp/<id>")
 @utility.validate_api_key(MACHINE_CACHE)
 def temp_download(id):
-    if id=="6969" or id=="randi" or id=="abhiyan":
+    if id=="6969" or id=="ran" or id=="abhiyan":
         print(id)
         return send_from_directory(UPLOAD_FOLDER, f"{id}.bin")
     else:
@@ -100,11 +100,11 @@ def dashboard():
     if(request.method=="POST"):
         q=request.form['q']
         print(q)
-        user=db.Student.select().where(db.Student.id==q)
-        
+        #user=db.Student.select().where(db.Student.id==q)
+        keyword=q
+        user=db.Student.select().where((db.Student.name ** f'%{keyword}%') | (db.Student.id ** f'%{keyword}%'))
         user_lst=[]
         for i in user:
-            print(i)
             user_lst.append({"id":i.id,"name":i.name,"sem":i.semester,"dep":i.faculty,"fingerprintFile":i.fp_template})
         user_json=json.dumps(user_lst)
         
