@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Management</title>
+    <link rel="Stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <h1>User Management</h1>
+
+    <button id="addUserBtn"><span>+</span>Add User</button>
+
+    <div>
+      <form method="POST" action="/dashboard">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search users by name, ID, or department"
+          name="q"
+        />
+        <button id="searchBtn">Search</button>
+      </form>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Semester</th>
+          <th>Department</th>
+          <th>fingerprintFile</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="userTableBody"></tbody>
+    </table>
+
+    <div id="userModal" class="modal">
+      <div class="modal-container">
+        <h2 id="formTitle">Add User:</h2>
+        <form id="userForm">
+          <label for="id">ID:</label>
+          <input type="text" id="id" name="id" required />
+          <br />
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <br />
+          <label for="sem">Semester:</label>
+          <select id="sem" name="sem" type="text" required>
+            <option value="" disabled selected>Select your semester</option>
+            <option>1st Semester</option>
+            <option>2nd Semester</option>
+            <option>3rd Semester</option>
+            <option>4th Semester</option>
+            <option>5th Semester</option>
+            <option>6th Semester</option>
+            <option>7th Semester</option>
+            <option>8th Semester</option>
+          </select>
+          <br />
+          <label for="dep">Department:</label>
+          <select id="dep" name="dep" type="text" required>
+            <option value="" disabled selected>Select your Department</option>
+            <option>B.E Computer</option>
+            <option>B.E Civil</option>
+            <option>B.E Architecture</option>
+          </select>
+          <br />
+          <label for="fingerprintFile">Upload Fingerprint File:</label>
+          <input
+            type="file"
+            id="fingerprintFile"
+            name="fingerprintFile"
+            accept=".txt,.csv"
+          />
+          <br />
+          <button type="submit">Submit</button>
+        </form>
+        <button id="closeModalBtn">Close</button>
+      </div>
+    </div>
+    <script>
+      document.user ={{ users | safe }}
+    </script>
+    <script src="/static/user_dashboard.js"></script>
+  </body>
+</html>
