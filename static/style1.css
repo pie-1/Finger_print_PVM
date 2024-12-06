@@ -167,30 +167,7 @@ body {
     background-color: #5a6268;
   }
   
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .modal-container {
-      width: 90%;
-      max-width: 350px;
-    }
-  
-    .modal-container h2 {
-      font-size: 1.6em;
-    }
-  
-    .modal-container label {
-      font-size: 13px;
-    }
-  
-    .modal-container input,
-    .modal-container select {
-      font-size: 12px;
-    }
-  
-    .modal-container button {
-      padding: 10px 15px;
-    }
-  }    
+ 
    /* for search btn */
   div {
     display: flex;
@@ -216,3 +193,28 @@ body {
   #searchBtn:hover {
     background-color: #9b0854;
   }
+
+   /* Responsive Styles */
+   @media (max-width: 768px) {
+    .modal-container {
+      width: 90%;
+      max-width: 350px;
+    }
+  
+    .modal-container h2 {
+      font-size: 1.6em;
+    }
+  
+    .modal-container label {
+      font-size: 13px;
+    }
+  
+    .modal-container input,
+    .modal-container select {
+      font-size: 12px;
+    }
+  
+    .modal-container button {
+      padding: 10px 15px;
+    }
+  }    
